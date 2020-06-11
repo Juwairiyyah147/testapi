@@ -8,6 +8,7 @@ api=Api(app)
 api.add_resource(Emp,'/emp')
 
 
+if __name__=='__main__':
+    app.run()
 
-
-app.run(port="8059",debug=True)
+#app.run(port="8059",debug=True)

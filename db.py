@@ -3,9 +3,9 @@ from decimal import Decimal
 import pymysql
 
 def query(querystr,return_json=True):
-    connection=pymysql.connect( host='localhost',
-                                user='Jiah',
-                                password='Juveria@9',
+    connection=pymysql.connect( host='cosc-skillup.cxgok3weok8n.ap-south-1.rds.amazonaws.com',
+                                user='admin',
+                                password='coscskillup',
                                 db='testapi',
                                 cursorclass=pymysql.cursors.DictCursor)
     connection.begin()
@@ -18,7 +18,7 @@ def query(querystr,return_json=True):
     if return_json:
             return jsonify(result)
     else:
-        return result        
+        return result
 def encode(data):
     for row in data:
         for key,value in row.items():
